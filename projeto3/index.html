@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Criar evento.</h1>
+            <p>Peencha este formulário</p>
+        </header>
+        <form>
+            <fieldset>
+                <div class="fieldset">
+                    <legend>Informações do evento</legend>
+                    <div class="encapsular">
+                        <label for="titulo-evento">Título do evento <span>(Minímo de 8 caracteres)</span></label>
+                        <input id="titulo" type="text">
+                    </div>
+                    <div class="encapsular">
+                        <label for="link-evento">Link do evento <span>(Comece com https://)</span></label>
+                        <input id="link" type="url">
+                    </div>
+                    <div class="encapsular">
+                        <label for="Whatsapp">Whatsapp para contato <span>(Somente números)</span></label>
+                        <input id="whatsapp" type="number">
+                    </div>
+                    <div class="encapsular">
+                        <label for="informacoes-evento">Informações extras</label>
+                        <textarea id="info"></textarea>
+                    </div>
+                    <div class="encapsular">
+                        <label for="Categoria">Categoria</label>
+                        <select id="Categoria">
+                            <option value="live">Ao vivo</option>
+                            <option value="podcast">Podcast</option>
+                            <option value="mentoria">Mentoria</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

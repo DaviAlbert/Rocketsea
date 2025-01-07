@@ -1,0 +1,12 @@
+Troca de infoirmações com o servidor
+	GET: receber e enviar informações.
+	POST: enviar informações.
+	SUBMIT: envia o conteudo dos inputs dentro do mesmo formulário, normalmente aparecêndo na url da página.
+
+CSS
+	FIELDSET: uma "área" dentro de um form.
+	LEGEND: uma legenda ou título para um fieldset.
+	Mais de um valor por item o baixo e cima vem primeiro e depois dos lados (EX.: margin(0 auto))
+	BORDER(pode inserir TOP, BOTTOM, RIGHT e LEFT, seaprados por um "-" (igual o margin)): Primeiro a expessura, depois o estilo (solid, etc) e depois a cor.
+HTML
+	FORM: um formulário com inputs para o usuário preencher.
