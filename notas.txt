@@ -1,0 +1,8 @@
+Margin: para "fora" da caixa
+Padding: para "dentro" da caixa
+<a>: um # dentro do href é um link "vazio", não levando para lugar nenhum
+
+Sites:
+A11y -> ajuda de for resumida
+W3C -> ajuda e regulamenta
+Google Fonts -> fonte3s para baixar ou  inserir direto no html
