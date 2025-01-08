@@ -7,6 +7,8 @@ CSS
 	FIELDSET: uma "área" dentro de um form.
 	LEGEND: uma legenda ou título para um fieldset.
 	Mais de um valor por item o baixo e cima vem primeiro e depois dos lados (EX.: margin(0 auto))
+	BORDER RADIUS: Para controlar as bordas separadamente com o BORDER RADIUS usa os valores em setido horário começando pela borda esquerda superior.
 	BORDER(pode inserir TOP, BOTTOM, RIGHT e LEFT, seaprados por um "-" (igual o margin)): Primeiro a expessura, depois o estilo (solid, etc) e depois a cor.
 HTML
 	FORM: um formulário com inputs para o usuário preencher.
+	FOOTER: o FOOTER sempre vai ter LEFT, RIGHT e BOTTOM como 0 por padrão

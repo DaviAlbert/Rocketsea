@@ -12,7 +12,8 @@ body{
 body::before{
     content: '';
     width: 100%;
-    height: 368px;
+    height: 100%;
+    max-height: 368px;
     background: #121214;
     display: block;
     position: absolute;
@@ -21,7 +22,8 @@ body::before{
     z-index: -1;
 }
 header{
-    width: 319px;
+    width: 100%;
+    max-width: 319px;
     margin-top: 74px;
 }
 header p{
@@ -34,13 +36,18 @@ header h1{
     font-family: 'Archivo', sans-serif;
     font-weight: bold;
     margin-bottom: 24px;
+    width: 100%;
+    max-width: 100vh;
 }
 form{
     background: #FAFAFC;
     margin-top: 38px;
     min-height: 300px;
-    border-radius: 8px;
+    border-radius: 8px 8px 0px 0px;
     padding: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
 }
 fieldset{
     border: none;
@@ -58,6 +65,33 @@ fieldset legend{
     border-bottom: 1px solid #E6E6F0;
     padding-bottom: 16px;
 }
+footer{
+    background: #f0f0f4;
+    height: 136px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 64px;
+    margin-bottom: 100px;
+    border-top: 1px solid #d6d6d6;
+    border-radius: 0 0 8px 8px;
+}
+footer .botao{
+    height: 56px;
+    background: #04d361;
+    color: #ffffff;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    border: none;
+    border-radius: 8px;
+}
+input:invalid{
+    border: 2px solid red;
+}
+footer .botao:hover{
+    background: #08a04c;
+}
 body, input, button, select, textarea{
     font-family: 'Poppins';
 }
@@ -67,7 +101,8 @@ body, input, button, select, textarea{
     gap: 24px;
 }
 .page{
-    width: 736px;
+    width: 75%;
+    max-width: 736px;
     margin: 0 auto;
 }
 .encapsular{
@@ -75,7 +110,9 @@ body, input, button, select, textarea{
     flex-direction: column;
 }
 
-.encapsular label{
+.encapsular label,
+.check label
+{
     font-size: 14px;
     line-height: 24px;
     color: #4e4958;
@@ -83,10 +120,10 @@ body, input, button, select, textarea{
 }
 
 .encapsular label span{
-    margin-left: 8px;
+    margin-left: 12px;
     font-size: 12px;
     line-height: 20px;
-    color: #acaab3;
+    color: #a9A7AF;
 }
 
 .encapsular input,
@@ -107,6 +144,9 @@ body, input, button, select, textarea{
     -moz-appearance: none;
     -webkit-appearance: none;
     -ms-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right 24px top 50%;
 }
 .encapsular textarea{
     padding: 0;
@@ -114,4 +154,44 @@ body, input, button, select, textarea{
 }
 .encapsular label span:hover{
     color: #6c6a71;
+}
+.col-3{
+    display: flex;
+    gap: 20px;
+}
+.col-3 > div:nth-child(1){
+    width: 100%;
+}
+.check{
+    position: relative;
+}
+.check label{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    gap: 16px; 
+}
+.check label::before{
+   content: '';
+   display: block;
+   width: 100%;
+   max-width: 24px;
+   height: 24px;
+   border: 1px solid #e6e6f0;
+   border-radius: 8px;
+}
+.check input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    max-width: 24px;  
+    height: 24px;
+}
+.check input:checked + label::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.00016 16.1698L4.83016 11.9998L3.41016 13.4098L9.00016 18.9998L21.0002 6.99984L19.5902 5.58984L9.00016 16.1698Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+}
+.checkbox-wrapper input:focus + label::before {
+    outline: 2px solid black;
 }

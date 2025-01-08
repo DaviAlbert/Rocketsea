@@ -6,31 +6,30 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Staatliches&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page">
         <header>
-            <h1>Criar evento.</h1>
+            <h1>Crie o evento</h1>
             <p>Peencha este formulário</p>
         </header>
-        <form>
+        <form id="formulario">
             <fieldset>
                 <div class="fieldset">
                     <legend>Informações do evento</legend>
                     <div class="encapsular">
-                        <label for="titulo-evento">Título do evento <span>(Minímo de 8 caracteres)</span></label>
-                        <input id="titulo" type="text">
+                        <label for="titulo-evento">Título do evento</label>
+                        <input id="titulo" type="text" required>
                     </div>
                     <div class="encapsular">
                         <label for="link-evento">Link do evento <span>(Comece com https://)</span></label>
-                        <input id="link" type="url">
+                        <input id="link" type="url" required>
                     </div>
                     <div class="encapsular">
                         <label for="Whatsapp">Whatsapp para contato <span>(Somente números)</span></label>
-                        <input id="whatsapp" type="number">
+                        <input id="whatsapp" type="number" required>
                     </div>
                     <div class="encapsular">
                         <label for="informacoes-evento">Informações extras</label>
@@ -46,7 +45,51 @@
                     </div>
                 </div>
             </fieldset>
+            <fieldset>
+                <div class="fieldset">
+                    <legend>Privacidade</legend>
+                    <div class="encapsular">
+                        <label for="emailADM">Email do administrador<span>(Digite um email válido)</span></label>
+                        <input id="emailADM" type="email">
+                    </div>
+                    <div class="encapsular">
+                        <label for="senhaACESSO">Senha de acesso<span>(Mínimo de 8 caracteres.)</span></label>
+                        <input id="senhaACESSO" type="password" minlength="8">
+                    </div>
+                    <div class="check">
+                        <input id="privado" type="checkbox">
+                        <label for="privado">Evento privado</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="fieldset">
+                    <legend>Dia e hora</legend>
+                    <div class="col-3">
+                        <div class="encapsular">
+                            <label for="data">Data</label>
+                            <input id="data" type="date">
+                        </div>
+                        <div class="encapsular">
+                            <label for="inicio">Início</label>
+                            <input id="inicio" type="time">
+                        </div>
+                        <div class="encapsular">
+                            <label for="Fim">Fim</label>
+                            <input id="Fim" type="time">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
         </form>
+        <footer>
+                <button 
+                    class="botao" 
+                    form="formulario" 
+                    name="Salvar">
+                    Salvar evento
+                </button>
+        </footer>
     </div>
 </body>
 </html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Avalie a sua mentoria</h1>
+        <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
+        <img src="img1.svg">
+    </header>
+    <form id="form">
+        <div class="cabecario">
+            <p>Informações pessoais</p>
+        </div>
+        <div class="corpo">
+            <fieldset>
+                <div class="nome">
+                    <div class="encapsular">
+                        <label for="data">Nome</label>
+                        <input id="Nome" type="text">
+                    </div>
+                    <div class="encapsular">
+                        <label for="Sobrenome">Sobrenome</label>
+                        <input id="Sobrenome" type="text">
+                    </div>
+                </div>
+                <div class="encapsular">
+                    <label for="email">Email<span>(Informe um email válido)</span></label>
+                    <input id="email" type="email">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Informações do mentor</legend>
+                    <div class="encapsular">
+                        <label for="mentor">Selecione quem foi seu mentor</label>
+                        <select id="Categoria">
+                            <option value="joao">João</option>
+                            <option value="Ivonei">Ivonei</option>
+                            <option value="Eric">Eric</option>
+                        </select>
+                <div class="encapsular">
+                    <label for="Feedback">Feedback sobre o mentor</label>
+                    <input class="Feedback" id="Feedback" type="email">
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="fieldset">
+                    <legend>Dia e hora</legend>
+                    <div class="col-3">
+                        <div class="encapsular">
+                            <label for="data">Data <span>(dd/mm/aaaa)</span></label>
+                            <input id="data" type="date">
+                        </div>
+                        <div class="encapsular">
+                            <label for="Das">Das</label>
+                            <input id="inicio" type="time">
+                        </div>
+                        <div class="encapsular">
+                            <label for="ate">Até</label>
+                            <input id="Fim" type="time">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <button 
+            class="botao" 
+            form="formulario" 
+            name="Salvar">
+            Salvar evento
+        </button>
+        </div>
+    </form>
+</body>
+</html>
