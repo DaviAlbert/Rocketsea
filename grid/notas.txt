@@ -1,0 +1,21 @@
+display: grid -> diz que vai ser uma grid
+    grid-tamplate-rows: Diz a respeito das linhas da grid (horizontal).
+    grid-tamplate-areas: Diz a respeito das áreas da grid.
+    grid-template-columns: Diz a respeito das colunas da grid (vertical).
+    repeat: diz o numero de divisões por linha e o quanto cada uma delas deve ocupar de espaço(EX.: repeat(6, 1fr))
+    fr: Pode se traduzir como fração, indicando a porcentagem da grid que o determinado item deve ocupar (1fr,2fr: diz que o primeiro item vai ocupar metade do espaço que o segundo item vai ocupar)
+
+Shorthand: Diz a respeito de comandos que são junções de 2 ou mais itens, como por exemplo os 2 itens a baixo:
+
+grid-colum: Determinando quanto um item deve ocupar da coluna (EX.: grid-colum: 1/3;)
+    grid-column-start: Determina o inicio do espaço que um item vai ocupar na coluna (EX.: grid-colum-start: 3;)
+    grid-column-end: Determina o fim do espaço que um item vai ocupar na coluna (EX.: grid-colum-end: 3;)
+grid-row: Determinando quanto um item deve ocupar da coluna (EX.: grid-row: 1/3;)
+    grid-row-start: : Determina o inicio do espaço que um item vai ocupar na linha (EX.: grid-row-start: 3;)
+    grid-row-end: Determina o fim do espaço que um item vai ocupar na linha (EX.: grid-row-end: 3;)
+grid-area: É usada com uma matriz dentro de uma string(EX.: grid-area:"A B B"
+                                                                      "A B B"
+                                                                      "A C D)
+                                                                      
+Linha virtial: Diz a respeito de linhas "imaginárias" criadas a partir da linha vertical de delimita um item de uam grid.
+    Para conter as 2 primeiras "caixas" da grid é preiso iniciar na linha virtual 1 e terminar na 3. Se terminar na 2 ele só vai estar incuindo a primeira "caixa".

@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+}
+#app{
+    display: grid;
+    height: 100vh;
+    border: 2px solid green;
+    grid-template-rows: 200px 1fr 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-area: "header header header""main main aside""footer footer footer";
+    gap: 30px;
+    /*row-gap: 30px;*/
+    /*column-gap: 100vh*/
+}
+#app > *{
+    border: 1px solid red;
+}
+#app header{
+    grid-area:header;
+}
+#app main{
+    grid-area: main;
+}
