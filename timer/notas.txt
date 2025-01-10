@@ -1,0 +1,25 @@
+*: Quando for usado se refere a tudo, todas as coisas
+
+export * as timer from index.js
+    Diz que tudo(*) que esta sendo chamado (funções, variavés, etc) vai entrar em um objeto chamado timer. Está importando do arquivo index.js
+FocusTimer.start(1, 3)
+    está iniciando a função start que está dentro do FocusTimer, passando os parametros 1 e 3.
+State: se refere a um estado de um determinado momento de um sistema, especificando algumas variáveis e estados (EX.: state.js)
+    Neste caso é usado com a formatação de um json
+Import state from '/state.js   
+    Irá retornar um objeto, porque o state.js só tem uma exportação de objeto
+target
+    Retorna o objeto html que o usuário clicou
+data
+    Item html que pode guardar informações sobre um item html(EX.:data-action="toogle")
+Pad
+    Preenche uma string com algo, sendo usado Star para Preencher no inicio e End para o final (EX.:padStart(2, "0")).
+??
+    Se o item à esquerda for nulo ele retornará o item à direita(EX.: item1 ?? item2). Conhecido como nullish coalescing operator
+typeof
+    Retorna o "tipo" do item como string. Por exemplo, se estiver typeof 2, retornará como a string "int"
+dataset
+    Pega o conteudo do data de um item html(EX.:event.target.dataset.action) => tiraqdo do event.js
+                                           (EXPLICAÇÂO: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_global_data)
+actions[action]()
+    Chama o item importado(actions) e executa o action como função. Por exemplo, se o action for "set", será executado como set()
