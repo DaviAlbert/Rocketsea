@@ -1,0 +1,8 @@
+npm install express
+    Para instalar o node
+mpm install nodemon --sabe-dev
+    Para facilitar atualçizações no server.js. Recarrega o servidor de for feita alguma alteração.
+    npm run dev
+        Para iniciar o projeto (usar no lugar do npm start).
+Middleware
+    São códigos que são executados no meio do processo, podendo barrar ou executar ações.
