@@ -1,8 +1,34 @@
-const express = require('express')
-const routes = require('./routes')
-const app = express()
-const PORT = 3333
+const express = require('express');
+const http = require('http');
+const PORT = 3000;
+const migrationsRun = require('./database/create/createdb.js');
+const routes = require('./database/routes/index.js');
 
-app.use(express.json())
-app.use(routes)
-app.listen(PORT, () => console.log(`Server is running on Port ${PORT}`))
+const app = express();
+
+migrationsRun();
+
+app.use(express.json()); // Middleware para interpretar JSON no corpo das requisições
+app.use(routes);
+
+// Middleware de erro
+app.use((error, request, response, next) => {
+    if (error instanceof AppError) {
+        return response.status(error.statusCode).json({
+            status: 'error',
+            message: error.message
+        });
+    }
+
+    console.error(error);
+
+    return response.status(500).json({
+        status: 'error',
+        message: 'Internal server error'
+    });
+});
+
+// Utilizando o express para criar o servidor
+app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
+});

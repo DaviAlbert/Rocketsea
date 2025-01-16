@@ -1,6 +1,11 @@
-const { Router } = require('express')
-const usersRoutes = require('./users.routes')
-const routes = Router()
+const express = require('express');
+const UsersController = require('../database/controller/UserController.js'); // Importa o controlador
+const usersRoutes = require('./user.routes.js')
 
-routes.use('/users', usersRoutes)
-module.exports = routes
+const Routes = express.Router();
+
+// Rota para criar um usuário
+Routes.use('/users', usersRoutes);
+Routes.post('/users', usersRoutes);
+
+module.exports = Routes;
